@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -96,7 +97,26 @@ namespace treeheap
             //await Task.Delay(5000);
         }
 
-        void selectionSort(List<int> arr)
+        async Task matchTxtBox(int indx1, int indx2)
+        {
+            
+            TextBox txt1 = (TextBox)Controls["textBox" + (indx1 + 1).ToString()];
+            TextBox txt2 = (TextBox)Controls["textBox" + (indx2 + 1).ToString()];
+
+            txt1.BackColor = Color.CadetBlue;
+
+            txt2.BackColor = Color.CadetBlue;
+            
+            await Task.Delay(2000);
+            txt1.BackColor = Color.White;
+
+            txt2.BackColor = Color.White;
+            
+            await Task.Delay(2000);
+        }
+
+
+        async void selectionSort(List<int> arr)
         {
             //timer1.Start();
             int pos_min, temp;
@@ -116,6 +136,7 @@ namespace treeheap
                     labl_j += j + "     \t";
                     lbl_j.Text = labl_j;
 
+                    await matchTxtBox(j,pos_min);
                     if (arr[j] < arr[pos_min])
                     {
                         //pos_min will keep track of the index that min is in, this is needed when a swap happens
