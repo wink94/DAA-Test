@@ -277,7 +277,6 @@
             this.Controls.Add(this.textBox1);
             this.Name = "SelectionSort";
             this.Text = "SelectionSort";
-            this.Load += new System.EventHandler(this.SelectionSort_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
