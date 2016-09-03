@@ -147,16 +147,16 @@ namespace treeheap
 
 
                 await findLine("label3");
-                //await matchTxtBox(j - 1, j);
+                
 
                 if (order == "Ascending")
                 {
-                    while (j > 0 && arr[j - 1] > arr[j])
+                    while (j > 0 && arr[j - 1] > arr[j])  //swap elements until j-1 is small
                     {
                         if (j != i + 1)
                         {
                             await findLine("label3");
-                            //await matchTxtBox(j - 1, j);
+                            
                         }
 
                         await findLine("label4");
@@ -176,12 +176,12 @@ namespace treeheap
                 else
                 {
 
-                    while (j > 0 && arr[j - 1] < arr[j])
+                    while (j > 0 && arr[j - 1] < arr[j])  //swap elements until j-1 is large
                     {
                         if (j != i + 1)
                         {
                             await findLine("label3");
-                            //await matchTxtBox(j - 1, j);
+                            
                         }
 
                         await findLine("label4");

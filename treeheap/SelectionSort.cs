@@ -151,7 +151,7 @@ namespace treeheap
                     lbl_j.Text = labl_j;
 
                     await findLine("label4");
-                    //await matchTxtBox(j,pos_min);
+                    
 
                     if (order == "Ascending")
                     {
