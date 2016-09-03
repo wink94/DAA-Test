@@ -16,7 +16,7 @@ namespace treeheap
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SelectionSort());
+            Application.Run(new DAASort());
             /*int[] arr = { 7, 5, 9 };
             Class1 c = new Class1(arr);
 

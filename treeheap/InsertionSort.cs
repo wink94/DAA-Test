@@ -128,7 +128,8 @@ namespace treeheap
         }
 
 
-        async void insertionSort(List<int> arr)
+
+        async void insertionSort(List<int> arr,string order)
         {
             int j, temp;
             string labl_i="",labl_j="";
@@ -147,26 +148,56 @@ namespace treeheap
 
                 await findLine("label3");
                 //await matchTxtBox(j - 1, j);
-                while (j > 0 && arr[j - 1] > arr[j])
+
+                if (order == "Ascending")
                 {
-                    if (j != i + 1)
+                    while (j > 0 && arr[j - 1] > arr[j])
                     {
-                        await findLine("label3");
-                        //await matchTxtBox(j - 1, j);
+                        if (j != i + 1)
+                        {
+                            await findLine("label3");
+                            //await matchTxtBox(j - 1, j);
+                        }
+
+                        await findLine("label4");
+                        await SwapLabels(arr[j], j - 1, arr[j - 1], j);
+                        temp = arr[j];
+                        arr[j] = arr[j - 1];
+                        arr[j - 1] = temp;
+
+                        await findLine("label5");
+                        j--;
+                        labl_j += j + "     \t";
+                        lbl_j.Text = labl_j;
+
+
+                    }
+                }
+                else
+                {
+
+                    while (j > 0 && arr[j - 1] < arr[j])
+                    {
+                        if (j != i + 1)
+                        {
+                            await findLine("label3");
+                            //await matchTxtBox(j - 1, j);
+                        }
+
+                        await findLine("label4");
+                        await SwapLabels(arr[j], j - 1, arr[j - 1], j);
+                        temp = arr[j];
+                        arr[j] = arr[j - 1];
+                        arr[j - 1] = temp;
+
+                        await findLine("label5");
+                        j--;
+                        labl_j += j + "     \t";
+                        lbl_j.Text = labl_j;
+
+
                     }
 
-                    await findLine("label4");
-                    await SwapLabels(arr[j], j-1, arr[j-1], j);
-                    temp = arr[j];
-                    arr[j] = arr[j - 1];
-                    arr[j - 1] = temp;
-
-                    await findLine("label5");
-                    j--;
-                    labl_j += j + "     \t";
-                    lbl_j.Text = labl_j;
-
-                    
                 }
 
 
@@ -176,7 +207,7 @@ namespace treeheap
         private void btnSort_Click(object sender, EventArgs e)
         {
 
-            if (getTextBoxVal())
+            if (getTextBoxVal() && cmbOrder.SelectedItem!=null)
             {
 
                 for (int i = 0; i < ls2.Count; i++)
@@ -191,9 +222,37 @@ namespace treeheap
                     }
                 }
 
-                insertionSort(ls2);
+                insertionSort(ls2, cmbOrder.SelectedItem.ToString());
+            }
+            else
+            {
+                MessageBox.Show("select order");
             }
 
+        }
+
+        private void btnInsertionSortBack_Click(object sender, EventArgs e)
+        {
+            var main = new DAASort();
+            main.Show();
+            Dispose();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            var i = 1;
+
+            while (i <= ls2.Count)
+            {
+                TextBox txt = (TextBox)Controls[ls[i - 1]];
+                txt.Clear();
+                Label lbl=(Label)Controls[(i-1).ToString()];
+                lbl.Dispose();
+                i++;
+                
+            }
+
+            cmbOrder.SelectedIndex = 0;
         }
     }
 }

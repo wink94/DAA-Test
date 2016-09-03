@@ -50,6 +50,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSelectionSortBack = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.cmbOrder = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -164,9 +167,9 @@
             this.lbl_j.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lbl_j.Location = new System.Drawing.Point(535, 193);
             this.lbl_j.Name = "lbl_j";
-            this.lbl_j.Size = new System.Drawing.Size(66, 16);
+            this.lbl_j.Size = new System.Drawing.Size(62, 16);
             this.lbl_j.TabIndex = 2;
-            this.lbl_j.Text = "ij values";
+            this.lbl_j.Text = "j values";
             // 
             // btnSort
             // 
@@ -259,12 +262,53 @@
             this.label1.TabIndex = 7;
             this.label1.Text = " for (int i = 0 ;  i < arr.Count - 1 ;  i++)\r\n\r\n";
             // 
+            // btnSelectionSortBack
+            // 
+            this.btnSelectionSortBack.Image = global::treeheap.Properties.Resources.back2;
+            this.btnSelectionSortBack.Location = new System.Drawing.Point(40, 5);
+            this.btnSelectionSortBack.Name = "btnSelectionSortBack";
+            this.btnSelectionSortBack.Size = new System.Drawing.Size(56, 59);
+            this.btnSelectionSortBack.TabIndex = 5;
+            this.btnSelectionSortBack.UseVisualStyleBackColor = true;
+            this.btnSelectionSortBack.Click += new System.EventHandler(this.btnSelectionSortBack_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(763, 70);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 27);
+            this.btnClear.TabIndex = 16;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // cmbOrder
+            // 
+            this.cmbOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmbOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbOrder.ForeColor = System.Drawing.Color.White;
+            this.cmbOrder.FormattingEnabled = true;
+            this.cmbOrder.Items.AddRange(new object[] {
+            "",
+            "Asending",
+            "Descending"});
+            this.cmbOrder.Location = new System.Drawing.Point(861, 73);
+            this.cmbOrder.Name = "cmbOrder";
+            this.cmbOrder.Size = new System.Drawing.Size(97, 24);
+            this.cmbOrder.TabIndex = 15;
+            // 
             // SelectionSort
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 461);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.cmbOrder);
+            this.Controls.Add(this.btnSelectionSortBack);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.lbl_j);
@@ -311,5 +355,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSelectionSortBack;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.ComboBox cmbOrder;
     }
 }

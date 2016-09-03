@@ -46,6 +46,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.lbl_i = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.btnInsertionSortBack = new System.Windows.Forms.Button();
+            this.cmbOrder = new System.Windows.Forms.ComboBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -174,7 +177,7 @@
             this.lbl_j.AutoSize = true;
             this.lbl_j.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_j.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbl_j.Location = new System.Drawing.Point(553, 193);
+            this.lbl_j.Location = new System.Drawing.Point(553, 227);
             this.lbl_j.Name = "lbl_j";
             this.lbl_j.Size = new System.Drawing.Size(62, 16);
             this.lbl_j.TabIndex = 6;
@@ -185,7 +188,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(454, 189);
+            this.label12.Location = new System.Drawing.Point(454, 223);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(13, 20);
             this.label12.TabIndex = 7;
@@ -196,7 +199,7 @@
             this.lbl_i.AutoSize = true;
             this.lbl_i.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_i.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.lbl_i.Location = new System.Drawing.Point(553, 128);
+            this.lbl_i.Location = new System.Drawing.Point(553, 162);
             this.lbl_i.Name = "lbl_i";
             this.lbl_i.Size = new System.Drawing.Size(62, 16);
             this.lbl_i.TabIndex = 10;
@@ -207,17 +210,58 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(454, 124);
+            this.label8.Location = new System.Drawing.Point(454, 158);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(13, 20);
             this.label8.TabIndex = 11;
             this.label8.Text = "i";
+            // 
+            // btnInsertionSortBack
+            // 
+            this.btnInsertionSortBack.Image = global::treeheap.Properties.Resources.back2;
+            this.btnInsertionSortBack.Location = new System.Drawing.Point(15, 11);
+            this.btnInsertionSortBack.Name = "btnInsertionSortBack";
+            this.btnInsertionSortBack.Size = new System.Drawing.Size(56, 59);
+            this.btnInsertionSortBack.TabIndex = 12;
+            this.btnInsertionSortBack.UseVisualStyleBackColor = true;
+            this.btnInsertionSortBack.Click += new System.EventHandler(this.btnInsertionSortBack_Click);
+            // 
+            // cmbOrder
+            // 
+            this.cmbOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.cmbOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbOrder.ForeColor = System.Drawing.Color.White;
+            this.cmbOrder.FormattingEnabled = true;
+            this.cmbOrder.Items.AddRange(new object[] {
+            "",
+            "Asending",
+            "Descending"});
+            this.cmbOrder.Location = new System.Drawing.Point(840, 86);
+            this.cmbOrder.Name = "cmbOrder";
+            this.cmbOrder.Size = new System.Drawing.Size(97, 24);
+            this.cmbOrder.TabIndex = 13;
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(726, 83);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 27);
+            this.btnClear.TabIndex = 14;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // InsertionSort
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 461);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.cmbOrder);
+            this.Controls.Add(this.btnInsertionSortBack);
             this.Controls.Add(this.lbl_j);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.lbl_i);
@@ -259,5 +303,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label lbl_i;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnInsertionSortBack;
+        private System.Windows.Forms.ComboBox cmbOrder;
+        private System.Windows.Forms.Button btnClear;
     }
 }

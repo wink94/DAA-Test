@@ -127,7 +127,7 @@ namespace treeheap
             await Task.Delay(1000);
         }
 
-        async void selectionSort(List<int> arr)
+        async void selectionSort(List<int> arr,string order)
         {
             
             int pos_min, temp;
@@ -152,13 +152,29 @@ namespace treeheap
 
                     await findLine("label4");
                     //await matchTxtBox(j,pos_min);
-                    if (arr[j] < arr[pos_min])
+
+                    if (order == "Ascending")
                     {
-                        //pos_min will keep track of the index that min is in, this is needed when a swap happens
-                        await findLine("label5");
-                        pos_min = j;
-                        labl_pos_min += pos_min + "     \t";
-                        lbl_pos_min.Text = labl_pos_min;
+                        if (arr[j] < arr[pos_min])
+                        {
+                            //pos_min will keep track of the index that min is in, this is needed when a swap happens
+                            await findLine("label5");
+                            pos_min = j;
+                            labl_pos_min += pos_min + "     \t";
+                            lbl_pos_min.Text = labl_pos_min;
+                        }
+                    }
+
+                    else
+                    {
+                        if (arr[j] > arr[pos_min])
+                        {
+                            //pos_min will keep track of the index that min is in, this is needed when a swap happens
+                            await findLine("label5");
+                            pos_min = j;
+                            labl_pos_min += pos_min + "     \t";
+                            lbl_pos_min.Text = labl_pos_min;
+                        }
                     }
                 }
 
@@ -178,7 +194,7 @@ namespace treeheap
 
         private void btnSort_Click(object sender, EventArgs e)
         {
-            if (getTextBoxVal())
+            if (getTextBoxVal() && cmbOrder.SelectedItem != null)
             {
 
                 for (int i = 0; i < ls2.Count; i++)
@@ -192,8 +208,37 @@ namespace treeheap
                     }
                 }
 
-                selectionSort(ls2);
+                selectionSort(ls2,cmbOrder.SelectedItem.ToString());
+
             }
+            else
+            {
+                MessageBox.Show("select order");
+            }
+        }
+
+        private void btnSelectionSortBack_Click(object sender, EventArgs e)
+        {
+            var main =new DAASort();
+            main.Show();
+            Dispose();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            var i = 1;
+
+            while (i <= ls2.Count)
+            {
+                TextBox txt = (TextBox)Controls[ls[i - 1]];
+                txt.Clear();
+                Label lbl = (Label)Controls[(i - 1).ToString()];
+                lbl.Dispose();
+                i++;
+
+            }
+
+            cmbOrder.SelectedIndex = 0;
         }
     }
 }
