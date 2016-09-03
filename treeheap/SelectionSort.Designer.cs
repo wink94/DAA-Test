@@ -120,9 +120,9 @@
             this.lbl_i.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lbl_i.Location = new System.Drawing.Point(535, 128);
             this.lbl_i.Name = "lbl_i";
-            this.lbl_i.Size = new System.Drawing.Size(51, 16);
+            this.lbl_i.Size = new System.Drawing.Size(66, 16);
             this.lbl_i.TabIndex = 2;
-            this.lbl_i.Text = "label8";
+            this.lbl_i.Text = "i  values";
             // 
             // label10
             // 
@@ -142,9 +142,9 @@
             this.lbl_pos_min.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lbl_pos_min.Location = new System.Drawing.Point(535, 163);
             this.lbl_pos_min.Name = "lbl_pos_min";
-            this.lbl_pos_min.Size = new System.Drawing.Size(51, 16);
+            this.lbl_pos_min.Size = new System.Drawing.Size(120, 16);
             this.lbl_pos_min.TabIndex = 2;
-            this.lbl_pos_min.Text = "label8";
+            this.lbl_pos_min.Text = "pos_min  values";
             // 
             // label12
             // 
@@ -164,22 +164,26 @@
             this.lbl_j.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lbl_j.Location = new System.Drawing.Point(535, 193);
             this.lbl_j.Name = "lbl_j";
-            this.lbl_j.Size = new System.Drawing.Size(51, 16);
+            this.lbl_j.Size = new System.Drawing.Size(66, 16);
             this.lbl_j.TabIndex = 2;
-            this.lbl_j.Text = "label8";
+            this.lbl_j.Text = "ij values";
             // 
             // btnSort
             // 
-            this.btnSort.Location = new System.Drawing.Point(334, 12);
+            this.btnSort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSort.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSort.ForeColor = System.Drawing.Color.White;
+            this.btnSort.Location = new System.Drawing.Point(334, 5);
             this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(75, 23);
+            this.btnSort.Size = new System.Drawing.Size(75, 34);
             this.btnSort.TabIndex = 3;
-            this.btnSort.Text = "button1";
-            this.btnSort.UseVisualStyleBackColor = true;
+            this.btnSort.Text = "Sort";
+            this.btnSort.UseVisualStyleBackColor = false;
             this.btnSort.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -187,9 +191,9 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(29, 52);
+            this.panel1.Location = new System.Drawing.Point(21, 70);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 387);
+            this.panel1.Size = new System.Drawing.Size(340, 360);
             this.panel1.TabIndex = 4;
             // 
             // label7
@@ -259,6 +263,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 461);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSort);
