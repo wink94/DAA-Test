@@ -49,6 +49,7 @@
             this.btnInsertionSortBack = new System.Windows.Forms.Button();
             this.cmbOrder = new System.Windows.Forms.ComboBox();
             this.btnClear = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -234,11 +235,11 @@
             this.cmbOrder.FormattingEnabled = true;
             this.cmbOrder.Items.AddRange(new object[] {
             "",
-            "Asending",
+            "Ascending",
             "Descending"});
-            this.cmbOrder.Location = new System.Drawing.Point(840, 86);
+            this.cmbOrder.Location = new System.Drawing.Point(726, 86);
             this.cmbOrder.Name = "cmbOrder";
-            this.cmbOrder.Size = new System.Drawing.Size(97, 24);
+            this.cmbOrder.Size = new System.Drawing.Size(128, 24);
             this.cmbOrder.TabIndex = 13;
             // 
             // btnClear
@@ -246,7 +247,7 @@
             this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(726, 83);
+            this.btnClear.Location = new System.Drawing.Point(884, 86);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 27);
             this.btnClear.TabIndex = 14;
@@ -254,11 +255,25 @@
             this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(673, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 16);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Order";
+            // 
             // InsertionSort
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(984, 461);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.cmbOrder);
             this.Controls.Add(this.btnInsertionSortBack);
@@ -306,5 +321,6 @@
         private System.Windows.Forms.Button btnInsertionSortBack;
         private System.Windows.Forms.ComboBox cmbOrder;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label6;
     }
 }

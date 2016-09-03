@@ -70,7 +70,7 @@ namespace treeheap
             lbl.AutoSize = false;
             lbl.BackColor = Color.SeaGreen;
             lbl.Font = new Font(FontFamily.GenericSerif, 20);
-            lbl.Width = 50;
+            lbl.Width = 65;
             lbl.Height = 30;
             lbl.Text = Convert.ToString(content);
             Controls.Add(lbl);
@@ -237,7 +237,7 @@ namespace treeheap
                 i++;
 
             }
-
+            ls2.Clear();
             cmbOrder.SelectedIndex = 0;
         }
     }
