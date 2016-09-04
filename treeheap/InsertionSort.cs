@@ -207,7 +207,7 @@ namespace treeheap
         private void btnSort_Click(object sender, EventArgs e)
         {
 
-            if (getTextBoxVal() && cmbOrder.SelectedItem!=null)
+            if ( cmbOrder.SelectedItem!=null && getTextBoxVal() )
             {
 
                 for (int i = 0; i < ls2.Count; i++)
